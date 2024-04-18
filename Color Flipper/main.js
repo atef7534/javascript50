@@ -10,4 +10,4 @@ inputQuery.addEventListener("click", function () {
     console.log(r);
     landing.style.backgroundColor = `rgb(${r}, ${g}, ${b})`;
     colorNameSpan.textContent = landing.style.backgroundColor;
-})
+});
