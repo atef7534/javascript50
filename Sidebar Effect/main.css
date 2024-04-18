@@ -1,0 +1,70 @@
+body {
+    margin: 0;
+}
+.sidebar {
+    position: relative;
+    background-color: beige;
+    height: calc(100vh - 40px);
+    width: fit-content;
+    padding: 20px;
+    transition: 1.3s;
+}
+.sidebar h3 {
+    margin: 0;
+    margin-bottom: 30px;
+    padding: 0;
+    font-size: 25px;
+    color: #0075FF;
+}
+.sidebar .links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+.sidebar .links li {
+    margin: 5px;
+}
+.sidebar .links li:hover {
+    background-color: rgba(255, 99, 71, 0.557);
+}
+.sidebar .links li a {
+    display: block;
+    width: inherit;
+    border: 1px solid rgb(214, 213, 213);
+    padding: 10px;
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+}
+
+/* style icon */
+.bars {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    width: 35px;
+    border: 2px solid rgb(44, 47, 47);
+    height: 10px;
+    display: flex;
+    text-align: center;
+    padding: 10px 5px;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    flex-direction: column;
+    cursor: pointer;
+    border-radius: 5px;
+}
+.bars:hover {
+    background-color: #fff;
+    border-color: #edb;
+}
+.bars:hover span {
+    border-color: #edb;
+}
+.bars span {
+    width: 80%;
+    display: block;
+    border: 2px solid rgb(60, 48, 48);
+    background-color: #333;
+}

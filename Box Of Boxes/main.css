@@ -1,0 +1,24 @@
+/* start styling */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+.container {
+    width: 500px;
+}
+.box {
+    width: 20px;
+    height: 20px;
+    border: 1px solid #ddd;
+    display: inline-block;
+    margin: 1px;
+    cursor: pointer;
+    transition: 1s;
+}
