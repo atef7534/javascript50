@@ -1,0 +1,27 @@
+body {
+    margin: 0;
+    box-sizing: border-box;
+}
+.title {
+    text-align: center;
+    padding: 100px;
+    font-size: 45px;
+    font-weight: bold;
+    color: tomato;
+    background-color: #eee;
+}
+.demo {
+    width: 200px;
+    font-size: 24px;
+    margin: 40px auto;
+    text-align: center;
+    font-size: 50px;
+    text-align: center;
+    box-sizing: border-box;
+    width: 80%;
+    border: 3px solid #dcd;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: tomato;
+    color: white;
+}

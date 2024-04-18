@@ -1,0 +1,80 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+div.header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 1px 1px 3px rgb(219, 219, 219);
+}
+div.header div {
+    width: 40%;
+    padding: 10px;
+    font-size: 25px;
+    letter-spacing: 4px;
+    font-weight: bold;
+    color: #333;
+}
+div.header div:nth-child(2) {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    padding: 0;
+}
+div.header div:nth-child(2) div {
+    cursor: pointer;
+    transition: 0.4s;
+}
+div.header div:nth-child(2) div:hover {
+    color: rgb(80, 80, 255);
+}
+div.landing {
+    background-color: red;
+    width: 100%;
+    max-width: 100%;
+    height: calc(100vh - 48.8px);
+    position: relative;
+    transition: 0.5s;
+}
+div.landing div.gate {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -200%);
+    background-color: #333;
+    color: white;
+    padding: 10px;
+    font-size: 35px;
+    letter-spacing: 3px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-weight: bold;
+}
+div.landing div.gate span.color-name {
+    color: lightblue;
+}
+div.landing div.random-color {
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+div.landing div.random-color button.query {
+    padding: 5px 10px;
+    font-weight: bold;
+    font-family: "cairo";
+    letter-spacing: 4px;
+    font-size: 30px;
+    border: 3px solid #333;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.4s;
+}
+div.landing div.random-color button.query:hover {
+    background-color: #0075ff;
+    border-color: #FFF;
+    color: #FFF !important;
+}
