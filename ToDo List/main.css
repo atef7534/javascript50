@@ -1,0 +1,88 @@
+* {
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "cairo", sans-serif;
+}
+ul {
+    list-style: none;
+}
+.head {
+    padding: 20px;
+    background-color: #f1ed8c;
+    text-align: center;
+}
+.head::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+.head h2 {
+    font-size: 50px;
+    color: #FFFeee;
+    text-shadow: 2px 2px 1px rgb(173, 164, 164);
+}
+.head input {
+    width: 75%;
+    font-size: 21px;
+    outline: none;
+    border: 2px solid #efed7f;
+    padding: 5px 5px 5px 15px;
+    border-radius: 5px;
+    float: left;
+}
+.head span {
+    width: 25%;
+    text-align: center;
+    background: rgb(231, 216, 106);
+    float: left;
+    padding: 5px;
+    font-size: 21px;
+    border-radius: 5px;
+    border: 2px solid #eee;
+    font-weight: bold;
+    color: #333;
+    cursor: pointer;
+    transition: 0.3s;
+}
+.head span:hover {
+    background-color: #6c82d2;
+    color: #FFFFFF;
+}
+.tasks {
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+}
+.tasks .task-list {
+    padding: 0;
+}
+.tasks .task-list li{
+    padding: 10px;
+    font-size: 21px;
+    border-bottom: 1px solid #ddd;
+    text-align: center;
+    cursor: pointer;
+}
+.tasks .task-list li span {
+    float: right;
+    cursor: pointer;
+    font-size: 32px;
+    margin-top: -10px;
+    margin-right: -10px;
+    font-weight: bold;
+    color: #767676;
+    transition: 0.8s;
+}
+.tasks .task-list li span:hover {
+    background-color:#e6efb8;
+}
+.tasks .task-list li:nth-child(even) {
+    background-color: lightyellow;
+}
+.tasks .task-list li:nth-child(odd) {
+    background-color: lightgoldenrodyellow;
+}
+.tasks .task-list li:hover {
+    background-color:rgb(231, 216, 106);
+}
