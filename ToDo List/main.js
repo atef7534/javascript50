@@ -9,6 +9,7 @@ function addTask() {
     input.value = "";
     task.innerHTML += "<span onclick='remove(this)'>&#10062</span>";
     task.setAttribute("onclick", "done(this)");
+    task.setAttribute("data-done", "false");
     taskList.appendChild(task);
 }
 function remove(e) {
