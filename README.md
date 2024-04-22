@@ -2,7 +2,7 @@
 javascript50 is 50 project implementations on javascript using simple Hyper Text Markup Language (HTML) and Cascading Style Sheet (CSS) mixed with Js (Javascript)
 <br>
 <h3>Start</h3>
-<ol">
+<ol>
   <li><a href="https://atef7534.github.io/javascript50/Accordion/index.html">Accordion</a></li>
   <li><a href="https://atef7534.github.io/javascript50/Box%20Of%20Boxes/index.html">Box Of Boxes</a></li>
   <li><a href="https://atef7534.github.io/javascript50/Color%20Flipper/index.html">Color Flipper</a></li>
