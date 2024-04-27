@@ -10,4 +10,5 @@ javascript50 is 50 project implementations on javascript using simple Hyper Text
   <li><a href="https://atef7534.github.io/javascript50/Date%20Now/index.html">Date Now</a></li>
   <li><a href="https://atef7534.github.io/javascript50/Sidebar%20Effect/index.html">Sidebar Effect</a></li>
   <li><a href="https://atef7534.github.io/javascript50/ToDo%20List/index.html">ToDo List</a></li>
+  <li><a href="https://atef7534.github.io/javascript50/typing/index.html">Typing</a></li>
 </ol>
