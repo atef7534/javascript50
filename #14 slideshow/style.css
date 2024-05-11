@@ -1,0 +1,102 @@
+* 
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container 
+{
+    padding-top: 20px;
+    position: relative;
+}
+.slides 
+{
+    position: relative;
+}
+.slide 
+{
+    display: none;
+    position: relative;
+    width: 80%;
+    margin: auto;
+}
+.prev, .next 
+{
+    cursor: pointer;
+    position: absolute;
+    font: 18px bold;
+    top: 50%;
+    width: fit-content;
+    padding: 16px;
+    border-radius: 0 3px 3px 0;
+    transition: 0.6s ease;
+    color: white;
+    background-color: #333232bc;
+}
+.next 
+{
+    right: 0px;
+    border-radius: 3px 0 0 3px;
+}
+.prev:hover,
+.next:hover
+{
+    background-color: rgba(0, 0, 0, 0.8);
+}
+.text
+{
+    color: #F2F2F2;
+    font-size: 15px;
+    padding: 8px 12px;
+    position: absolute;
+    bottom: 8px;
+    width: 100%;
+    text-align: center;
+}
+.num
+{
+    position: absolute;
+    top: 4px;
+    left: 4px;
+    font-weight: bold;
+    font-size: 18px;
+    color: #FFF;
+}
+.dots
+{
+    margin: 10px 0px 10px 0px;
+    text-align: center;
+}
+.dot
+{
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    border-radius: 50%;
+    margin: 0 2px;
+    background-color: #BBB;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+.active, 
+.dot:hover
+{
+    background-color: #717171;
+}
+.fade
+{
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+@keyframes fade 
+{
+    from 
+    {
+        opacity: 0.4;
+    }
+    to
+    {
+        opacity: 1;
+    }
+}

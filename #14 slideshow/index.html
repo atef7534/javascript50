@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Slideshow - Home Page</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="slides">
+            <div class="slide fade">
+                <div class="num">1 / 4</div>
+                <img src="imgs/img1.jpg" alt="no-img" style="width: 100%;">
+                <div class="text">Caption One</div>
+            </div>
+            <div class="slide fade">
+                <div class="num">2 / 4</div>
+                <img src="imgs/img2.jpg" alt="no-img" style="width: 100%;">
+                <div class="text">Caption Two</div>
+            </div>
+            <div class="slide fade">
+                <div class="num">3 / 4</div>
+                <img src="imgs/img3.jpg" alt="no-img" style="width: 100%;">
+                <div class="text">Caption Three</div>
+            </div>
+            <div class="slide fade">
+                <div class="num">4 / 4</div>
+                <img src="imgs/img4.jpg" alt="no-img" style="width: 100%;">
+                <div class="text">Caption Four</div>
+            </div>
+            <a class="prev" onclick="plus(-1)">&#10094;</a>
+            <a class="next" onclick="plus(1)">&#10095;</a>
+        </div>
+        
+    </div>
+    <div class="dots">
+        <span class="dot" onclick="showSlides(1)"></span>
+        <span class="dot" onclick="showSlides(2)"></span>
+        <span class="dot" onclick="showSlides(3)"></span>
+        <span class="dot" onclick="showSlides(4)"></span>
+    </div>
+
+    <script src="main.js"></script>
+</body>
+</html>
