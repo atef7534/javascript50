@@ -1,13 +1,17 @@
 let slides = document.getElementsByClassName("slide");
 let dots = document.getElementsByClassName("dot");
 let slideIndex = 1;
+let myTimeOut;
 
 showSlides(slideIndex);
 
-function showSlides(index)
+function showSlides()
 {
+    if (slideIndex < 1)
+        slideIndex = slides.length;
+    if (slideIndex > slides.length)
+        slideIndex = 1;
     let i;
-    
     for (i = 0; i < slides.length; i++)
     {
         slides[i].style.display = "none";
@@ -20,26 +24,18 @@ function showSlides(index)
     
     slides[slideIndex - 1].style.display = "block";
     dots[slideIndex - 1].className += " active";
-            
-    slideIndex++;
-    slideIndex = modify(slideIndex);
     
-    setTimeout(showSlides, 2000);
-}
-function modify()
-{
-    if (slideIndex > slides.length)
-    {
-        slideIndex = 1;
-    }
-    if (slideIndex < 1)
-    {
-        slideIndex = slides.length;
-    }
-    return slideIndex;
+    slideIndex++;
+    
+    myTimeOut = setTimeout(showSlides, 2000);
 }
 function plus(x)
 {
     slideIndex += x;
-    showSlides(modify(slideIndex));
+    if (slideIndex < 1)
+        slideIndex = slides.length;
+    if (slideIndex > slideIndex)
+        slideIndex = 1;
+    clearTimeout(myTimeOut)
+    showSlides();
 }
