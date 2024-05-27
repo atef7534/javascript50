@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>All Projects</title>
+  <style>
+    *
+    {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    ul
+    {
+      list-style: none;
+    }
+    .row
+    {
+      text-align: center;
+      width: 280px;
+      background-color: #0075FF;
+      cursor: pointer;
+      height: 200px;
+      line-height: 170px;
+      border-radius: 8px;
+    }
+    a
+    {
+      text-decoration: none;
+      font-size: 25px;
+      color: #FFF;
+      padding: 10px;
+      width: 100%;
+      display: block;
+    }
+  </style>
+</head>
+<body>
+  <div class="cotnainer" style="width: 100%; display: flex; justify-content: space-evenly; align-items: flex-start; gap: 10px; flex-wrap: wrap; padding: 15px;">
+    <div class="row">
+      <a href="01%20Accordion/">Accordion</a>
+    </div>
+    <div class="row">
+      <a href="02%20Box%20Of%20Boxes/">Box Of Boxes</a>
+    </div>
+    <div class="row">
+      <a href="03%20Color%20Flipper/">Color Flipper</a>
+    </div>
+    <div class="row">
+      <a href="04%20Counter%20Button/">Counter Button</a>
+    </div>
+    <div class="row">
+      <a href="05%20Date%20Now/">Date Now</a>
+    </div>
+    <div class="row">
+      <a href="06%20Expanding%20Cards/">Expanding Cards</a>
+    </div>
+    <div class="row">
+      <a href="07%20Loader/">Loader</a>
+    </div>
+    <div class="row">
+      <a href="08%20Sidebar%20Effect/">Sidebar Effect</a>
+    </div>
+    <div class="row">
+      <a href="09%20ToDo%20List/">ToDo List</a>
+    </div>
+    <div class="row">
+      <a href="10%20typing/">Typing</a>
+    </div>
+    <div class="row">
+      <a href="11%20Small%20Word/">Expanding Cards</a>
+    </div>
+    <div class="row">
+      <a href="12%20Kinetic%20Loader/">Kinetic Loader</a>
+    </div>
+    <div class="row">
+      <a href="13%20Calculator/">Calculator</a>
+    </div>
+    <div class="row">
+      <a href="14%20slideshow/">Slideshow</a>
+    </div>
+    <div class="row">
+      <a href="15%20testimonial%20slider/">Testimonial Slider</a>
+    </div>
+  </div>
+  <script>
+    let rows = document.querySelectorAll(".row");
+    for (let i = 0; i < rows.length; i++)
+    {
+      let randomBackground = `rgb(${Math.floor(Math.random() * 256)}, ${Math.floor(Math.random() * 256)}, ${Math.floor(Math.random() * 256)})`;
+      rows[i].style.backgroundColor = randomBackground;
+    }
+  </script>
+</body>
+</html>
