@@ -1,0 +1,92 @@
+*
+{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+.container
+{
+  position: relative;
+  padding: 10px;
+  width: 80%;
+  margin: auto;
+  display: flex;
+  justify-content: space-around;
+  margin-top: 300px;
+  overflow: hidden;
+}
+.container::before
+{
+  content: "";
+  width: 80%;
+  top: 47.5%;
+  z-index: -1;
+  height: 4px;
+  position: absolute;
+  background-color: #e0e0e0;
+}
+.container .progress
+{
+  position: absolute;
+  height: 4px;
+  width: 0;
+  top: 47.5%;
+  background-color: #0075FF;
+  left: 8%;
+  transition: width 0.5s;
+}
+.container .lvl
+{
+  position: relative;
+  --line-border-fill: #3498db;
+  --line-border-empty: #e0e0e0;
+  text-align: center;
+  box-sizing: border-box;
+  background-color: #fff;
+  color: #999;
+  border-radius: 50%;
+  height: 30px;
+  width: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 3px solid var(--line-border-empty);
+  transition: 0.4s ease;
+}
+.container .lvl p
+{
+  background-color: #DDD;
+  color: #333;
+  width: 20px;
+  height: 20px;
+  text-align: center;
+  border-radius: 50%;
+}
+.container .lvl.active
+{
+  border-color: var(--line-border-fill);
+}
+.buttons
+{
+  width: fit-content;
+  margin: auto;
+  margin-top: 40px;
+}
+.btn {
+  cursor: pointer;
+  background-color: #ddd;
+  color: #333;
+  padding: 4px;
+  border: 2px solid #ccc;
+  font-size: 21px;
+  margin-left: 20px;
+  min-width: 200px;
+  text-transform: capitalize;
+  border-radius: 8px;
+  transition: color 0.4s, background-color 0.5s, border 0.5s; 
+}
+.btn:hover {
+  color: #FFF;
+  background-color: #0075FF;
+  border-color: #0075FF;
+}
