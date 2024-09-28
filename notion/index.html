@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notion Clone</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>My Notion Clone</h1>
+        <button id="addTaskBtn">Add Task</button>
+    </header>
+    <main>
+        <section id="taskList"></section>
+    </main>
+    <div id="taskModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Add New Task</h2>
+            <input type="text" id="taskTitle" placeholder="Task Title">
+            <input type="text" id="taskDescription" placeholder="Task Description">
+            <button id="saveTaskBtn">Save Task</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
