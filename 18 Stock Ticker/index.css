@@ -1,0 +1,22 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    background-color: #282828;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.stock-display-container {
+    width: 200px;
+    margin: 2em auto;
+    padding: 1em;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: .5em;
+    background-color: white;
+}
+
+img {
+    max-width: 15px;
+    margin-left: 5px;
+}
