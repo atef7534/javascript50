@@ -31,7 +31,7 @@ A standalone showcase page (`index.html` in the repo root) presents all of these
 | 17 | [Notion](https://atef7534.github.io/javascript50/17%20notion/index.html) | `17 notion` | DOM Manipulation, Event Listeners, Forms |
 | 18 | [Stock Ticker](https://atef7534.github.io/javascript50/18%20Stock%20Ticker/index.html) | `18 Stock Ticker` | ES Modules, Timers, DOM Manipulation |
 | 19 | [Color Scheme Generator](https://atef7534.github.io/javascript50/19%20Color%20Scheme%20Generator/index.html) | `19 Color Scheme Generator` | Fetch API, REST API, JSON, Async/Await |
-| 20 | [Contact Management](https://atef7534.github.io/javascript50/2020Contact%20Management/index.html) | `20 Contact Management` | Fetch API, REST API, JSON, Async/Await |
+| 20 | [Contact Management](https://atef7534.github.io/javascript50/20%20Contact%20Management/index.html) | `20 Contact Management` | Fetch API, REST API, JSON, Async/Await, DOM Manipulation, Event Listeners |
 
 ### Project details
 
