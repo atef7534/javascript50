@@ -58,4 +58,3 @@ function handleHTMLMarkup(contact) {
 loadData().then(data => {
     data.forEach(contact => handleHTMLMarkup(contact))
 })
-// jsonData.forEach(contact => handleHTMLMarkup(contact))
