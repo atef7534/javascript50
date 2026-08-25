@@ -15,7 +15,7 @@ async function loadData() {
 async function searchForTheName(value) {
     const allContacts = await loadData()
 
-    const foundContacts = allContacts.filter(contact => contact.name.toLowerCase().includes(value))
+    const foundContacts = allContacts.filter(contact => contact.name.toLowerCase().includes(value.toLowerCase()))
 
     createBannelsFor(foundContacts)
 }
