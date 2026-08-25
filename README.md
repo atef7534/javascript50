@@ -31,6 +31,7 @@ A standalone showcase page (`index.html` in the repo root) presents all of these
 | 17 | [Notion](https://atef7534.github.io/javascript50/17%20notion/index.html) | `17 notion` | DOM Manipulation, Event Listeners, Forms |
 | 18 | [Stock Ticker](https://atef7534.github.io/javascript50/18%20Stock%20Ticker/index.html) | `18 Stock Ticker` | ES Modules, Timers, DOM Manipulation |
 | 19 | [Color Scheme Generator](https://atef7534.github.io/javascript50/19%20Color%20Scheme%20Generator/index.html) | `19 Color Scheme Generator` | Fetch API, REST API, JSON, Async/Await |
+| 20 | [Contact Management](https://atef7534.github.io/javascript50/19%20Contact%20Management/index.html) | `20 Contact Management` | Fetch API, REST API, JSON, Async/Await |
 
 ### Project details
 
@@ -71,6 +72,8 @@ A standalone showcase page (`index.html` in the repo root) presents all of these
 **18 · Stock Ticker** — A simulated live stock ticker that polls a local mock data source every 1.5 seconds, updating price, name and timestamp, and swapping in a green/red/grey icon to show whether the price rose, fell, or held steady. Built with ES modules; run via `npm install && npm start` (Vite) from inside its folder.
 
 **19 · Color Scheme Generator** — Pick a base color and a scheme mode, submit the form, and it sends a request to [The Color API](https://www.thecolorapi.com/), receives JSON in return, and dynamically renders the resulting six-color palette with click-to-copy swatches. Requires an internet connection to fetch new palettes.
+
+**20 · Contact Management** — Search for you contact using search in any place you want to look for.
 
 ---
 
@@ -126,6 +129,7 @@ javascript50/
 ├── 17 notion/
 ├── 18 Stock Ticker/
 ├── 19 Color Scheme Generator/
+├── 20 Contact Management/
 ├── index.html      # searchable project showcase
 └── README.md
 ```
