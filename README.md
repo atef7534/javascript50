@@ -12,25 +12,25 @@ A standalone showcase page (`index.html` in the repo root) presents all of these
 
 | # | Project | Folder | Concepts |
 |---|---------|--------|----------|
-| 01 | [Accordion](./01%20Accordion/index.html) | `01 Accordion` | DOM Manipulation, Event Listeners, CSS Transitions |
-| 02 | [Box Of Boxes](./02%20Box%20Of%20Boxes/index.html) | `02 Box Of Boxes` | DOM Manipulation, Event Listeners, Timers |
-| 03 | [Color Flipper](./03%20Color%20Flipper/index.html) | `03 Color Flipper` | DOM Manipulation, Event Listeners |
-| 04 | [Counter Button](./04%20Counter%20Button/index.html) | `04 Counter Button` | DOM Manipulation, Functions |
-| 05 | [Date Now](./05%20Date%20Now/index.html) | `05 Date Now` | Timers, Date Object |
-| 06 | [Expanding Cards](./06%20Expanding%20Cards/index.html) | `06 Expanding Cards` | DOM Manipulation, Event Listeners, CSS Transitions |
-| 07 | [Loader](./07%20Loader/index.html) | `07 Loader` | CSS Animations, DOM Manipulation, Forms |
-| 08 | [Sidebar Effect](./08%20Sidebar%20Effect/index.html) | `08 Sidebar Effect` | DOM Manipulation, CSS Transitions |
-| 09 | [ToDo List](./09%20ToDo%20List/index.html) | `09 ToDo List` | DOM Manipulation, Event Listeners, Forms |
-| 10 | [Typing](./10%20typing/index.html) | `10 typing` | DOM Manipulation, Timers, Arrays, Objects |
-| 11 | [Small Word](./11%20Small%20Word/index.html) | `11 Small Word` | DOM Manipulation, Event Listeners, Forms |
-| 12 | [Kinetic Loader](./12%20Kinetic%20Loader/index.html) | `12 Kinetic Loader` | CSS Animations, DOM Manipulation, Timers |
-| 13 | [Calculator](./13%20Calculator/index.html) | `13 Calculator` | DOM Manipulation, Functions, Arrays |
-| 14 | [Slideshow](./14%20slideshow/index.html) | `14 slideshow` | DOM Manipulation, Event Listeners, Timers |
-| 15 | [Testimonial Slider](./15%20testimonial%20slider/index.html) | `15 testimonial slider` | DOM Manipulation, Arrays, Objects |
-| 16 | [Progress Steps](./16%20progress%20steps/index.html) | `16 progress steps` | DOM Manipulation, Event Listeners, CSS Transitions |
-| 17 | [Notion](./17%20notion/index.html) | `17 notion` | DOM Manipulation, Event Listeners, Forms |
-| 18 | [Stock Ticker](./18%20Stock%20Ticker/index.html) | `18 Stock Ticker` | ES Modules, Timers, DOM Manipulation |
-| 19 | [Color Scheme Generator](./19%20Color%20Scheme%20Generator/index.html) | `19 Color Scheme Generator` | Fetch API, REST API, JSON, Async/Await |
+| 01 | [Accordion](https://atef7534.github.io/javascript50/01%20Accordion/index.html) | `01 Accordion` | DOM Manipulation, Event Listeners, CSS Transitions |
+| 02 | [Box Of Boxes](https://atef7534.github.io/javascript50/02%20Box%20Of%20Boxes/index.html) | `02 Box Of Boxes` | DOM Manipulation, Event Listeners, Timers |
+| 03 | [Color Flipper](https://atef7534.github.io/javascript50/03%20Color%20Flipper/index.html) | `03 Color Flipper` | DOM Manipulation, Event Listeners |
+| 04 | [Counter Button](https://atef7534.github.io/javascript50/04%20Counter%20Button/index.html) | `04 Counter Button` | DOM Manipulation, Functions |
+| 05 | [Date Now](https://atef7534.github.io/javascript50/05%20Date%20Now/index.html) | `05 Date Now` | Timers, Date Object |
+| 06 | [Expanding Cards](https://atef7534.github.io/javascript50/06%20Expanding%20Cards/index.html) | `06 Expanding Cards` | DOM Manipulation, Event Listeners, CSS Transitions |
+| 07 | [Loader](https://atef7534.github.io/javascript50/07%20Loader/index.html) | `07 Loader` | CSS Animations, DOM Manipulation, Forms |
+| 08 | [Sidebar Effect](https://atef7534.github.io/javascript50/08%20Sidebar%20Effect/index.html) | `08 Sidebar Effect` | DOM Manipulation, CSS Transitions |
+| 09 | [ToDo List](https://atef7534.github.io/javascript50/09%20ToDo%20List/index.html) | `09 ToDo List` | DOM Manipulation, Event Listeners, Forms |
+| 10 | [Typing](https://atef7534.github.io/javascript50/10%20typing/index.html) | `10 typing` | DOM Manipulation, Timers, Arrays, Objects |
+| 11 | [Small Word](https://atef7534.github.io/javascript50/11%20Small%20Word/index.html) | `11 Small Word` | DOM Manipulation, Event Listeners, Forms |
+| 12 | [Kinetic Loader](https://atef7534.github.io/javascript50/12%20Kinetic%20Loader/index.html) | `12 Kinetic Loader` | CSS Animations, DOM Manipulation, Timers |
+| 13 | [Calculator](https://atef7534.github.io/javascript50/13%20Calculator/index.html) | `13 Calculator` | DOM Manipulation, Functions, Arrays |
+| 14 | [Slideshow](https://atef7534.github.io/javascript50/14%20slideshow/index.html) | `14 slideshow` | DOM Manipulation, Event Listeners, Timers |
+| 15 | [Testimonial Slider](https://atef7534.github.io/javascript50/15%20testimonial%20slider/index.html) | `15 testimonial slider` | DOM Manipulation, Arrays, Objects |
+| 16 | [Progress Steps](https://atef7534.github.io/javascript50/16%20progress%20steps/index.html) | `16 progress steps` | DOM Manipulation, Event Listeners, CSS Transitions |
+| 17 | [Notion](https://atef7534.github.io/javascript50/17%20notion/index.html) | `17 notion` | DOM Manipulation, Event Listeners, Forms |
+| 18 | [Stock Ticker](https://atef7534.github.io/javascript50/18%20Stock%20Ticker/index.html) | `18 Stock Ticker` | ES Modules, Timers, DOM Manipulation |
+| 19 | [Color Scheme Generator](https://atef7534.github.io/javascript50/19%20Color%20Scheme%20Generator/index.html) | `19 Color Scheme Generator` | Fetch API, REST API, JSON, Async/Await |
 
 ### Project details
 
@@ -83,7 +83,12 @@ A standalone showcase page (`index.html` in the repo root) presents all of these
 
 ## How to run
 
-Most projects are plain static pages — no build step required:
+**Live site:** the easiest way to browse every project is the deployed showcase page:
+👉 **https://atef7534.github.io/javascript50/**
+
+Each project link in the table above also points directly to its live, deployed page.
+
+To run locally instead:
 
 1. Clone the repository:
    ```bash
