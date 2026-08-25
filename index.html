@@ -1,102 +1,727 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>All Projects</title>
-  <style>
-    *
-    {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-    ul
-    {
-      list-style: none;
-    }
-    .row
-    {
-      text-align: center;
-      width: 280px;
-      background-color: #0075FF;
-      cursor: pointer;
-      height: 200px;
-      line-height: 170px;
-      border-radius: 8px;
-    }
-    a
-    {
-      text-decoration: none;
-      font-size: 25px;
-      color: #FFF;
-      padding: 10px;
-      width: 100%;
-      display: block;
-    }
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>javascript50 — Project Showcase</title>
+<meta name="description" content="A showcase of vanilla JavaScript, HTML and CSS mini-projects from the javascript50 repository, built to practice core frontend and JavaScript concepts.">
+<style>
+  :root{
+    --bg:#0d1117;
+    --bg-elevated:#161b22;
+    --border:#30363d;
+    --border-muted:#21262d;
+    --text:#e6edf3;
+    --text-muted:#8b949e;
+    --accent:#58a6ff;
+    --accent-strong:#1f6feb;
+    --accent-soft:rgba(88,166,255,0.12);
+    --tag-bg:#1f2937;
+    --success:#3fb950;
+    --radius:10px;
+    --max-width:1200px;
+  }
+
+  *,*::before,*::after{ box-sizing:border-box; }
+
+  html{ scroll-behavior:smooth; }
+
+  body{
+    margin:0;
+    background:var(--bg);
+    color:var(--text);
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji";
+    line-height:1.55;
+    -webkit-font-smoothing:antialiased;
+  }
+
+  img{ max-width:100%; display:block; }
+
+  a{ color:var(--accent); }
+
+  .wrap{
+    max-width:var(--max-width);
+    margin:0 auto;
+    padding:0 24px;
+  }
+
+  /* ---------- Header ---------- */
+  header.site-header{
+    border-bottom:1px solid var(--border-muted);
+    background:var(--bg);
+    position:sticky;
+    top:0;
+    z-index:10;
+  }
+  .site-header .wrap{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    padding-top:16px;
+    padding-bottom:16px;
+    gap:16px;
+    flex-wrap:wrap;
+  }
+  .brand{
+    display:flex;
+    align-items:center;
+    gap:10px;
+    font-weight:600;
+    font-size:16px;
+    color:var(--text);
+    text-decoration:none;
+  }
+  .brand svg{ flex-shrink:0; }
+  .header-links{
+    display:flex;
+    gap:20px;
+    font-size:14px;
+  }
+  .header-links a{
+    color:var(--text-muted);
+    text-decoration:none;
+  }
+  .header-links a:hover{ color:var(--text); }
+
+  /* ---------- Hero ---------- */
+  .hero{
+    padding:64px 0 48px;
+    border-bottom:1px solid var(--border-muted);
+    background:
+      radial-gradient(circle at 15% 0%, rgba(88,166,255,0.08), transparent 55%),
+      var(--bg);
+  }
+  .hero h1{
+    font-size:clamp(32px,5vw,48px);
+    margin:0 0 16px;
+    letter-spacing:-0.02em;
+    font-weight:700;
+  }
+  .hero h1 span{
+    background:linear-gradient(90deg,var(--accent) 0%, #79c0ff 100%);
+    -webkit-background-clip:text;
+    background-clip:text;
+    color:transparent;
+  }
+  .hero p.lede{
+    max-width:680px;
+    color:var(--text-muted);
+    font-size:17px;
+    margin:0 0 28px;
+  }
+  .hero-actions{
+    display:flex;
+    gap:12px;
+    flex-wrap:wrap;
+  }
+  .btn{
+    display:inline-flex;
+    align-items:center;
+    gap:8px;
+    padding:9px 18px;
+    border-radius:6px;
+    font-size:14px;
+    font-weight:600;
+    text-decoration:none;
+    border:1px solid var(--border);
+    cursor:pointer;
+    transition:background-color .15s ease, border-color .15s ease, transform .1s ease;
+  }
+  .btn:active{ transform:translateY(1px); }
+  .btn-primary{
+    background:var(--accent-strong);
+    border-color:var(--accent-strong);
+    color:#fff;
+  }
+  .btn-primary:hover{ background:#3a82f7; }
+  .btn-secondary{
+    background:var(--bg-elevated);
+    color:var(--text);
+  }
+  .btn-secondary:hover{ background:#1c2229; border-color:#8b949e; }
+
+  /* ---------- Stats ---------- */
+  .stats{
+    padding:36px 0;
+    border-bottom:1px solid var(--border-muted);
+  }
+  .stats-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
+    gap:16px;
+  }
+  .stat-card{
+    background:var(--bg-elevated);
+    border:1px solid var(--border);
+    border-radius:var(--radius);
+    padding:18px 20px;
+  }
+  .stat-card .num{
+    font-size:28px;
+    font-weight:700;
+    color:var(--accent);
+    display:block;
+    margin-bottom:4px;
+  }
+  .stat-card .label{
+    font-size:13px;
+    color:var(--text-muted);
+  }
+
+  /* ---------- Projects section ---------- */
+  .projects{
+    padding:48px 0 80px;
+  }
+  .projects-header{
+    display:flex;
+    align-items:baseline;
+    justify-content:space-between;
+    flex-wrap:wrap;
+    gap:12px;
+    margin-bottom:20px;
+  }
+  .projects-header h2{
+    font-size:24px;
+    margin:0;
+    font-weight:650;
+  }
+
+  .search-bar{
+    margin-bottom:8px;
+  }
+  .search-bar label{
+    display:block;
+    font-size:13px;
+    color:var(--text-muted);
+    margin-bottom:8px;
+  }
+  .search-input-wrap{
+    position:relative;
+    max-width:480px;
+  }
+  .search-input-wrap svg{
+    position:absolute;
+    left:12px;
+    top:50%;
+    transform:translateY(-50%);
+    color:var(--text-muted);
+    pointer-events:none;
+  }
+  #searchInput{
+    width:100%;
+    padding:10px 14px 10px 38px;
+    background:var(--bg-elevated);
+    border:1px solid var(--border);
+    border-radius:8px;
+    color:var(--text);
+    font-size:14px;
+    outline:none;
+    transition:border-color .15s ease, box-shadow .15s ease;
+  }
+  #searchInput:focus{
+    border-color:var(--accent);
+    box-shadow:0 0 0 3px var(--accent-soft);
+  }
+  #searchInput::placeholder{ color:var(--text-muted); }
+
+  #resultCount{
+    font-size:13px;
+    color:var(--text-muted);
+    margin:14px 0 24px;
+  }
+
+  /* ---------- Grid & cards ---------- */
+  .project-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:18px;
+  }
+  @media (max-width:980px){
+    .project-grid{ grid-template-columns:repeat(2,1fr); }
+  }
+  @media (max-width:640px){
+    .project-grid{ grid-template-columns:1fr; }
+  }
+
+  .project-card{
+    background:var(--bg-elevated);
+    border:1px solid var(--border);
+    border-radius:var(--radius);
+    padding:20px;
+    display:flex;
+    flex-direction:column;
+    transition:border-color .15s ease, transform .15s ease, box-shadow .15s ease;
+  }
+  .project-card:hover{
+    border-color:var(--accent);
+    transform:translateY(-2px);
+    box-shadow:0 8px 24px rgba(0,0,0,0.35);
+  }
+  .project-card.is-hidden{ display:none; }
+
+  .card-top{
+    display:flex;
+    align-items:center;
+    gap:10px;
+    margin-bottom:10px;
+  }
+  .card-num{
+    font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
+    font-size:12px;
+    font-weight:700;
+    color:var(--accent);
+    background:var(--accent-soft);
+    border-radius:6px;
+    padding:3px 8px;
+    letter-spacing:0.02em;
+  }
+  .card-title{
+    margin:0;
+    font-size:17px;
+    font-weight:650;
+    color:var(--text);
+  }
+
+  .card-desc{
+    color:var(--text-muted);
+    font-size:14px;
+    margin:0 0 14px;
+    flex-grow:1;
+  }
+
+  .tag-list{
+    list-style:none;
+    display:flex;
+    flex-wrap:wrap;
+    gap:6px;
+    margin:0 0 16px;
+    padding:0;
+  }
+  .tag-list li{
+    background:var(--tag-bg);
+    border:1px solid var(--border);
+    color:#c9d1d9;
+    font-size:11.5px;
+    padding:3px 9px;
+    border-radius:999px;
+  }
+
+  .card-actions{
+    display:flex;
+    gap:8px;
+    margin-top:auto;
+    flex-wrap:wrap;
+  }
+  .card-actions .btn{
+    padding:7px 14px;
+    font-size:13px;
+    flex:1;
+    justify-content:center;
+  }
+
+  .empty-state{
+    text-align:center;
+    padding:64px 20px;
+    color:var(--text-muted);
+    border:1px dashed var(--border);
+    border-radius:var(--radius);
+    display:none;
+  }
+  .empty-state.is-visible{ display:block; }
+  .empty-state p{ margin:0; font-size:15px; }
+
+  /* ---------- Footer ---------- */
+  footer.site-footer{
+    border-top:1px solid var(--border-muted);
+    padding:32px 0;
+  }
+  footer.site-footer .wrap{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    flex-wrap:wrap;
+    gap:12px;
+  }
+  footer.site-footer p{
+    margin:0;
+    font-size:13px;
+    color:var(--text-muted);
+  }
+  footer.site-footer a{ text-decoration:none; }
+
+  .sr-only{
+    position:absolute;
+    width:1px;height:1px;
+    padding:0;margin:-1px;
+    overflow:hidden;
+    clip:rect(0,0,0,0);
+    white-space:nowrap;
+    border:0;
+  }
+
+  .skip-link{
+    position:absolute;
+    left:-999px;
+    top:auto;
+    background:var(--accent-strong);
+    color:#fff;
+    padding:10px 16px;
+    border-radius:6px;
+    z-index:100;
+  }
+  .skip-link:focus{
+    left:16px;
+    top:16px;
+  }
+</style>
 </head>
 <body>
-  <div class="cotnainer" style="width: 100%; display: flex; justify-content: space-evenly; align-items: flex-start; gap: 10px; flex-wrap: wrap; padding: 15px;">
-    <div class="row">
-      <a href="01%20Accordion/">Accordion</a>
-    </div>
-    <div class="row">
-      <a href="02%20Box%20Of%20Boxes/">Box Of Boxes</a>
-    </div>
-    <div class="row">
-      <a href="03%20Color%20Flipper/">Color Flipper</a>
-    </div>
-    <div class="row">
-      <a href="04%20Counter%20Button/">Counter Button</a>
-    </div>
-    <div class="row">
-      <a href="05%20Date%20Now/">Date Now</a>
-    </div>
-    <div class="row">
-      <a href="06%20Expanding%20Cards/">Expanding Cards</a>
-    </div>
-    <div class="row">
-      <a href="07%20Loader/">Loader</a>
-    </div>
-    <div class="row">
-      <a href="08%20Sidebar%20Effect/">Sidebar Effect</a>
-    </div>
-    <div class="row">
-      <a href="09%20ToDo%20List/">ToDo List</a>
-    </div>
-    <div class="row">
-      <a href="10%20typing/">Typing</a>
-    </div>
-    <div class="row">
-      <a href="11%20Small%20Word/">Expanding Cards</a>
-    </div>
-    <div class="row">
-      <a href="12%20Kinetic%20Loader/">Kinetic Loader</a>
-    </div>
-    <div class="row">
-      <a href="13%20Calculator/">Calculator</a>
-    </div>
-    <div class="row">
-      <a href="14%20slideshow/">Slideshow</a>
-    </div>
-    <div class="row">
-      <a href="15%20testimonial%20slider/">Testimonial Slider</a>
-    </div>
-    <div class="row">
-      <a href="16%20progress%20steps/">Progress Steps</a>
-    </div>
-    <div class="row"></div>
-      <a href="17%20notion/">Notion</a>
-    </div>
+
+<a class="skip-link" href="#main">Skip to main content</a>
+
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="#main">
+      <svg width="24" height="24" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true">
+        <path d="M8 0c4.42 0 8 3.58 8 8a8.01 8.01 0 0 1-5.47 7.59c-.4.08-.55-.17-.55-.38 0-.27.01-1.13.01-2.2 0-.75-.25-1.23-.54-1.48 1.78-.2 3.65-.88 3.65-3.95 0-.88-.31-1.59-.82-2.15.08-.2.36-1.02-.08-2.12 0 0-.67-.22-2.2.82-.64-.18-1.32-.27-2-.27-.68 0-1.36.09-2 .27-1.53-1.03-2.2-.82-2.2-.82-.44 1.1-.16 1.92-.08 2.12-.51.56-.82 1.28-.82 2.15 0 3.06 1.86 3.75 3.64 3.95-.23.2-.44.55-.51 1.07-.46.21-1.61.55-2.33-.66-.15-.24-.6-.83-1.23-.82-.67.01-.27.38.01.53.34.19.73.9.82 1.13.16.45.68 1.31 2.69.94 0 .67.01 1.3.01 1.49 0 .21-.15.45-.55.38A7.995 7.995 0 0 1 0 8c0-4.42 3.58-8 8-8Z"/>
+      </svg>
+      javascript50
+    </a>
+    <nav class="header-links" aria-label="Primary">
+      <a href="https://github.com/atef7534/javascript50" target="_blank" rel="noopener noreferrer">Repository</a>
+      <a href="#projects">Projects</a>
+    </nav>
   </div>
-  <script>
-    let rows = document.querySelectorAll(".row");
-    for (let i = 0; i < rows.length; i++)
+</header>
+
+<main id="main">
+
+  <section class="hero">
+    <div class="wrap">
+      <h1>19 of 50 <span>JavaScript Projects</span></h1>
+      <p class="lede">
+        A growing collection of small, self-contained frontend projects built with plain HTML, CSS and JavaScript
+        to practice core browser and language concepts &mdash; DOM manipulation, events, timers, the Fetch API and more.
+        The repository is named for a target of 50 projects; it currently holds 19 completed ones, shown below exactly as they exist today.
+      </p>
+      <div class="hero-actions">
+        <a class="btn btn-primary" href="https://github.com/atef7534/javascript50" target="_blank" rel="noopener noreferrer">
+          View Repository
+        </a>
+        <a class="btn btn-secondary" href="#projects">
+          Browse Projects
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="stats" aria-label="Repository statistics">
+    <div class="wrap">
+      <div class="stats-grid">
+        <div class="stat-card">
+          <span class="num">19</span>
+          <span class="label">Projects implemented</span>
+        </div>
+        <div class="stat-card">
+          <span class="num">100%</span>
+          <span class="label">Vanilla HTML / CSS / JS</span>
+        </div>
+        <div class="stat-card">
+          <span class="num">1</span>
+          <span class="label">Project uses an external API</span>
+        </div>
+        <div class="stat-card">
+          <span class="num">50</span>
+          <span class="label">Target project count</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="projects" id="projects">
+    <div class="wrap">
+      <div class="projects-header">
+        <h2>All Projects</h2>
+      </div>
+
+      <div class="search-bar">
+        <label for="searchInput">Search by project name, technology, or concept</label>
+        <div class="search-input-wrap">
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+            <circle cx="7" cy="7" r="5.5" stroke="currentColor" stroke-width="1.5"/>
+            <path d="M11 11L14.5 14.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+          </svg>
+          <input type="text" id="searchInput" placeholder="e.g. API, color, DOM, timer..." autocomplete="off">
+        </div>
+      </div>
+
+      <p id="resultCount" aria-live="polite">19 projects</p>
+
+      <div class="project-grid" id="projectGrid">
+        <!-- Cards are rendered by JavaScript from the projects array below -->
+      </div>
+
+      <div class="empty-state" id="emptyState">
+        <p>No project matches your search.</p>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <p>Built as a showcase for the <a href="https://github.com/atef7534/javascript50" target="_blank" rel="noopener noreferrer">javascript50</a> repository.</p>
+    <p><a href="https://github.com/atef7534" target="_blank" rel="noopener noreferrer">@atef7534</a> on GitHub</p>
+  </div>
+</footer>
+
+<script>
+(function () {
+  "use strict";
+
+  // Source of truth: every project folder that currently exists in the
+  // javascript50 repository, verified directly against the repo contents.
+  var projects = [
     {
-      let randomBackground = `rgb(${Math.floor(Math.random() * 256)}, ${Math.floor(Math.random() * 256)}, ${Math.floor(Math.random() * 256)})`;
-      rows[i].style.backgroundColor = randomBackground;
+      num: "01",
+      name: "Accordion",
+      folder: "01 Accordion",
+      desc: "A classic collapsible accordion built with plain buttons and panels. Clicking a section header toggles an \"active\" class and animates the panel's max-height open or closed.",
+      tags: ["HTML", "CSS", "JavaScript", "DOM Manipulation", "Event Listeners", "CSS Transitions"]
+    },
+    {
+      num: "02",
+      name: "Box Of Boxes",
+      folder: "02 Box Of Boxes",
+      desc: "A grid of hundreds of small boxes generated dynamically in JavaScript. Hovering over a box applies a randomized colored glow effect for a few seconds using setTimeout.",
+      tags: ["JavaScript", "DOM Manipulation", "Event Listeners", "Timers", "Arrays"]
+    },
+    {
+      num: "03",
+      name: "Color Flipper",
+      folder: "03 Color Flipper",
+      desc: "A one-button app that generates a random RGB color, applies it as the page background, and displays the resulting rgb() value as text.",
+      tags: ["HTML", "CSS", "JavaScript", "DOM Manipulation", "Event Listeners"]
+    },
+    {
+      num: "04",
+      name: "Counter Button",
+      folder: "04 Counter Button",
+      desc: "A simple click counter with an increment button and a reset button, tracking a running count in the DOM without any external state.",
+      tags: ["HTML", "CSS", "JavaScript", "DOM Manipulation", "Functions"]
+    },
+    {
+      num: "05",
+      name: "Date Now",
+      folder: "05 Date Now",
+      desc: "A live-updating clock that reads the current hours, minutes, seconds and milliseconds from the Date object and refreshes the display every 100ms.",
+      tags: ["JavaScript", "DOM Manipulation", "Timers", "Date Object"]
+    },
+    {
+      num: "06",
+      name: "Expanding Cards",
+      folder: "06 Expanding Cards",
+      desc: "A row of image panels that expand to fill available space when clicked, while the others collapse, using a single shared \"active\" class toggle.",
+      tags: ["HTML", "CSS", "JavaScript", "DOM Manipulation", "Event Listeners", "CSS Transitions"]
+    },
+    {
+      num: "07",
+      name: "Loader",
+      folder: "07 Loader",
+      desc: "A spinning CSS loader whose animation can be paused and resumed, with a color picker input that updates the loader's border color live.",
+      tags: ["HTML", "CSS", "JavaScript", "CSS Animations", "DOM Manipulation", "Forms"]
+    },
+    {
+      num: "08",
+      name: "Sidebar Effect",
+      folder: "08 Sidebar Effect",
+      desc: "A slide-in navigation sidebar that stays hidden off-screen by default and toggles into view using a data attribute to track its open/closed state.",
+      tags: ["HTML", "CSS", "JavaScript", "DOM Manipulation", "CSS Transitions"]
+    },
+    {
+      num: "09",
+      name: "ToDo List",
+      folder: "09 ToDo List",
+      desc: "An interactive to-do list where tasks can be added from a text input, marked as done with a strikethrough style, and removed individually.",
+      tags: ["HTML", "CSS", "JavaScript", "DOM Manipulation", "Event Listeners", "Forms"]
+    },
+    {
+      num: "10",
+      name: "Typing",
+      folder: "10 typing",
+      desc: "A typing speed game that shows a random word from a word bank, tracks a countdown timer with selectable difficulty levels, and scores correct entries as the player types.",
+      tags: ["HTML", "CSS", "JavaScript", "DOM Manipulation", "Event Listeners", "Timers", "Arrays", "Objects"]
+    },
+    {
+      num: "11",
+      name: "Small Word",
+      folder: "11 Small Word",
+      desc: "A live text-styling tool where a dropdown controls font weight and a color input controls text color, both applied instantly to a sample paragraph.",
+      tags: ["HTML", "CSS", "JavaScript", "DOM Manipulation", "Event Listeners", "Forms"]
+    },
+    {
+      num: "12",
+      name: "Kinetic Loader",
+      folder: "12 Kinetic Loader",
+      desc: "An animated loading sequence that hides its container and reveals a \"goodbye\" message, created dynamically and removed after a delay.",
+      tags: ["HTML", "CSS", "JavaScript", "CSS Animations", "DOM Manipulation", "Timers"]
+    },
+    {
+      num: "13",
+      name: "Calculator",
+      folder: "13 Calculator",
+      desc: "A text-input calculator that validates the entered expression, rejects invalid input containing letters, and evaluates arithmetic using a manual stack-based parser rather than eval().",
+      tags: ["HTML", "CSS", "JavaScript", "DOM Manipulation", "Event Listeners", "Functions", "Arrays"]
+    },
+    {
+      num: "14",
+      name: "Slideshow",
+      folder: "14 slideshow",
+      desc: "An auto-advancing image slideshow with next/previous controls and clickable dot indicators, cycling through slides on a repeating timer.",
+      tags: ["HTML", "CSS", "JavaScript", "DOM Manipulation", "Event Listeners", "Timers"]
+    },
+    {
+      num: "15",
+      name: "Testimonial Slider",
+      folder: "15 testimonial slider",
+      desc: "A testimonial carousel that stores reviewer data (name, age, photo and quote) in a JavaScript array of objects and renders one testimonial at a time into the DOM.",
+      tags: ["HTML", "CSS", "JavaScript", "DOM Manipulation", "Arrays", "Objects"]
+    },
+    {
+      num: "16",
+      name: "Progress Steps",
+      folder: "16 progress steps",
+      desc: "A multi-step progress indicator with next/previous buttons that activate steps one at a time and animate a progress bar's width to match.",
+      tags: ["HTML", "CSS", "JavaScript", "DOM Manipulation", "Event Listeners", "CSS Transitions"]
+    },
+    {
+      num: "17",
+      name: "Notion",
+      folder: "17 notion",
+      desc: "A minimal Notion-style task board where a modal dialog lets you enter a task title and description, then adds it as a card to the task list on save.",
+      tags: ["HTML", "CSS", "JavaScript", "DOM Manipulation", "Event Listeners", "Forms"]
+    },
+    {
+      num: "18",
+      name: "Stock Ticker",
+      folder: "18 Stock Ticker",
+      desc: "A simulated live stock ticker that polls a local mock data source every 1.5 seconds, updating the displayed price, name and timestamp, and swapping in a green/red/grey icon to indicate whether the price rose, fell, or held steady.",
+      tags: ["HTML", "CSS", "JavaScript", "ES Modules", "Timers", "DOM Manipulation"]
+    },
+    {
+      num: "19",
+      name: "Color Scheme Generator",
+      folder: "19 Color Scheme Generator",
+      desc: "An interactive color palette generator: pick a base color and a scheme mode, submit the form, and it sends a request to The Color API, receives JSON in return, and dynamically renders the resulting six-color palette with click-to-copy swatches.",
+      tags: ["HTML", "CSS", "JavaScript", "Fetch API", "REST API", "JSON", "Async/Await", "DOM Manipulation", "Forms"]
     }
-  </script>
+  ];
+
+  var grid = document.getElementById("projectGrid");
+  var resultCount = document.getElementById("resultCount");
+  var emptyState = document.getElementById("emptyState");
+  var searchInput = document.getElementById("searchInput");
+
+  function encodeFolderPath(folder) {
+    return folder.split(" ").map(encodeURIComponent).join("%20");
+  }
+
+  function buildCard(project) {
+    var card = document.createElement("article");
+    card.className = "project-card";
+    card.dataset.searchText = (
+      project.name + " " + project.desc + " " + project.tags.join(" ")
+    ).toLowerCase();
+
+    var top = document.createElement("div");
+    top.className = "card-top";
+
+    var num = document.createElement("span");
+    num.className = "card-num";
+    num.textContent = project.num;
+
+    var title = document.createElement("h3");
+    title.className = "card-title";
+    title.textContent = project.name;
+
+    top.appendChild(num);
+    top.appendChild(title);
+
+    var desc = document.createElement("p");
+    desc.className = "card-desc";
+    desc.textContent = project.desc;
+
+    var tagList = document.createElement("ul");
+    tagList.className = "tag-list";
+    tagList.setAttribute("aria-label", project.name + " technologies");
+    project.tags.forEach(function (tag) {
+      var li = document.createElement("li");
+      li.textContent = tag;
+      tagList.appendChild(li);
+    });
+
+    var actions = document.createElement("div");
+    actions.className = "card-actions";
+
+    var folderPath = encodeFolderPath(project.folder);
+
+    var openLink = document.createElement("a");
+    openLink.className = "btn btn-primary";
+    openLink.href = folderPath + "/index.html";
+    openLink.textContent = "Open Project";
+
+    var sourceLink = document.createElement("a");
+    sourceLink.className = "btn btn-secondary";
+    sourceLink.href = "https://github.com/atef7534/javascript50/tree/main/" + folderPath;
+    sourceLink.target = "_blank";
+    sourceLink.rel = "noopener noreferrer";
+    sourceLink.textContent = "Source";
+
+    actions.appendChild(openLink);
+    actions.appendChild(sourceLink);
+
+    card.appendChild(top);
+    card.appendChild(desc);
+    card.appendChild(tagList);
+    card.appendChild(actions);
+
+    return card;
+  }
+
+  function renderProjects() {
+    var fragment = document.createDocumentFragment();
+    projects.forEach(function (project) {
+      fragment.appendChild(buildCard(project));
+    });
+    grid.appendChild(fragment);
+  }
+
+  function updateResultCount(visibleCount) {
+    var label = visibleCount === 1 ? "project" : "projects";
+    resultCount.textContent = visibleCount + " " + label;
+  }
+
+  function filterProjects() {
+    var query = searchInput.value.trim().toLowerCase();
+    var cards = grid.querySelectorAll(".project-card");
+    var visibleCount = 0;
+
+    cards.forEach(function (card) {
+      var matches = query === "" || card.dataset.searchText.indexOf(query) !== -1;
+      card.classList.toggle("is-hidden", !matches);
+      if (matches) visibleCount++;
+    });
+
+    updateResultCount(visibleCount);
+    emptyState.classList.toggle("is-visible", visibleCount === 0);
+  }
+
+  renderProjects();
+  updateResultCount(projects.length);
+  searchInput.addEventListener("input", filterProjects);
+})();
+</script>
+
 </body>
 </html>
