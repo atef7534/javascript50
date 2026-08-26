@@ -28,5 +28,5 @@ function getDateFormat() {
     const seconds = (date.getSeconds() < 10) ? `0${date.getSeconds()}` : date.getSeconds()
     
     // return value [string]
-    return `${hours}/${minutes}/${seconds}`
+    return `${hours}:${minutes}:${seconds}`
 }

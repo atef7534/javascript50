@@ -1,4 +1,4 @@
-import getStockData from './fakeStockAPI'
+import getStockData from './fakeStockAPI.js'
 
 const nameEl = document.getElementById('name')
 const symEl = document.getElementById('symbol')
@@ -14,13 +14,13 @@ setInterval(function() {
     const img = document.createElement('img')
 
     if (previousPrice === undefined) {
-        img.src = '/svg/grey.svg'
+        img.src = './svg/grey.svg'
     } else if (price > previousPrice) {
-        img.src = '/svg/green.svg'
+        img.src = './svg/green.svg'
     } else if (price < previousPrice) {
-        img.src = '/svg/red.svg'
+        img.src = './svg/red.svg'
     } else {
-        img.src = '/svg/grey.svg'
+        img.src = './svg/grey.svg'
     }
 
     priceIconEl.replaceChildren(img)
