@@ -32,6 +32,8 @@ A standalone showcase page (`index.html` in the repo root) presents all of these
 | 18 | [Stock Ticker](https://atef7534.github.io/javascript50/18%20Stock%20Ticker/index.html) | `18 Stock Ticker` | ES Modules, Timers, DOM Manipulation |
 | 19 | [Color Scheme Generator](https://atef7534.github.io/javascript50/19%20Color%20Scheme%20Generator/index.html) | `19 Color Scheme Generator` | Fetch API, REST API, JSON, Async/Await |
 | 20 | [Contact Management](https://atef7534.github.io/javascript50/20%20Contact%20Management/index.html) | `20 Contact Management` | Fetch API, REST API, JSON, Async/Await, DOM Manipulation, Event Listeners |
+| 21 | [Real State](https://atef7534.github.io/javascript50/21%20Real%20State/index.html) | `21 Real State` | Fetch API, REST API, JSON |
+| 22 | [War](https://atef7534.github.io/javascript50/22%20War/index.html) | `22 War` | Fetch API, REST API, JSON, Async/Await, DOM Manipulation, Event Listeners |
 
 ### Project details
 
@@ -75,6 +77,9 @@ A standalone showcase page (`index.html` in the repo root) presents all of these
 
 **20 · Contact Management** — Search for you contact using search in any place you want to look for.
 
+**21 · Real State** — Create a real state view of states for sale.
+
+**22 · War** — A game with a computer using Generated API Decks.
 ---
 
 ## Tech stack
