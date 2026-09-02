@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Movie Watchlist</title>
+    <link rel="stylesheet" href="./css/main.css" />
+    <link rel="stylesheet" href="./css/all.min.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header id="header" class="header">
+      <div class="overlay"></div>
+      <div class="container">
+        <h2 class="see-my-watchlist">
+          <a href="watchlist.html">My Watchlist</a>
+        </h2>
+        <h3 class="find-your-film">
+          <a href="index.html">Find your film</a>
+        </h3>
+      </div>
+    </header>
+
+    <section id="content">
+      <div class="empty">
+        <img src="./Icon.png" alt="A Watch Movie Icon." />
+        <h3 class="exploring">Start exploring</h3>
+      </div>
+      <div class="container"></div>
+    </section>
+
+    <script>
+      const watchlistContainer = document.querySelector("#content .container");
+      let watchlist = JSON.parse(localStorage.getItem("mywatchlist"));
+
+      function getHTMLMarkup(info) {
+        const html = `
+          <div class='movie'>
+              <img src='${info.Poster}' />
+              <div class='text'>
+                  <div class='title-container'>
+                      <h2 class='title'>${info.Title}</h2>
+                      <span class='rate'>
+                          <img src='./icon-2.png' alt='A star icon' class='star-icon' />
+                          ${info.Ratings?.[0]?.Value?.replace("/10", "") ?? "0"}
+                      </span>
+                  </div>
+                  <div class='details'>
+                      <span class='runtime'>${info.Runtime}</span>
+                      <span class='genre'>${info.Genre}</span>
+                      <button class='remove'>
+                      <img src='./icon-4.png' alt='A minus icon' /> Remove </button>
+                  </div>
+                  <div class='plot'>
+                      ${info.Plot}
+                  </div>
+              </div>
+          </div>
+      `;
+        return html;
+      }
+      if (watchlist) {
+        document.querySelector(".empty").className = "empty hide";
+        watchlist.forEach((element) => {
+          watchlistContainer.innerHTML += getHTMLMarkup(element);
+        });
+      }
+      const remove = document.querySelectorAll(".remove");
+      remove.forEach((btn, i) => {
+        btn.addEventListener("click", () => {
+          watchlist = watchlist.filter(
+            (item) => item.imdbID !== watchlist[i].imdbID,
+          );
+          localStorage.setItem("mywatchlist", JSON.stringify(watchlist));
+          document.querySelectorAll(".movie")[i].remove();
+        });
+      });
+    </script>
+  </body>
+</html>
