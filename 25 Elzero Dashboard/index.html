@@ -1,0 +1,345 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <title>Elzero Dashboard</title>
+    <link rel="stylesheet" href="./css/main.css" />
+    <link rel="stylesheet" href="./css/all.min.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <script src="./main.js" defer></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#dashboard-content">Skip to dashboard content</a>
+    <main id="dashboard">
+      <aside id="navigation-bar">
+        <div class="container">
+          <h1 class="logo">Elzero</h1>
+          <nav aria-label="Primary navigation">
+            <ul>
+              <li>
+                <a class="active" href="index.html"
+                  ><i class="fa-regular fa-chart-bar"></i>Dashboard</a
+                >
+              </li>
+              <li>
+                <span class="nav-item"
+                  ><i class="fa-solid fa-gear"></i>Settings</span
+                >
+              </li>
+              <li>
+                <span class="nav-item"
+                  ><i class="fa-regular fa-user"></i>Profile</span
+                >
+              </li>
+              <li>
+                <span class="nav-item"
+                  ><i class="fa-solid fa-diagram-project"></i>Projects</span
+                >
+              </li>
+              <li>
+                <span class="nav-item"
+                  ><i class="fa-solid fa-graduation-cap"></i>Courses</span
+                >
+              </li>
+              <li>
+                <span class="nav-item"
+                  ><i class="fa-regular fa-circle-user"></i>Friends</span
+                >
+              </li>
+              <li>
+                <span class="nav-item"
+                  ><i class="fa-regular fa-file"></i>Files</span
+                >
+              </li>
+              <li>
+                <span class="nav-item"
+                  ><i class="fa-regular fa-credit-card"></i>Plans</span
+                >
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </aside>
+      <section id="dashboard-manipulation">
+        <header id="header">
+          <div class="search-for-something" role="search">
+            <label class="sr-only" for="keyword">Search dashboard cards</label
+            ><i class="fa-solid fa-magnifying-glass"></i
+            ><input id="keyword" type="search" placeholder="Type A Keyword" />
+            <p class="sr-only" id="search-status" role="status"></p>
+          </div>
+          <div class="personal">
+            <button
+              class="notifications"
+              type="button"
+              aria-label="Show notifications"
+            >
+              <i class="fa-regular fa-bell"></i></button
+            ><a class="profile-link" href="#profile-card"
+              ><img
+                class="avatar"
+                src="./images/avatar.jpg"
+                alt="Portrait of Atif Yasser"
+            /></a>
+          </div>
+        </header>
+        <p class="sr-only" id="notification-status" role="status"></p>
+        <section id="dashboard-content">
+          <div class="container">
+            <h2 class="dashboard-header">Dashboard</h2>
+            <div class="widgets">
+              <article class="widget welcome" id="profile-card">
+                <header class="widget-heading shaded">
+                  <div>
+                    <h2>Welcome</h2>
+                    <p>Atif Yasser</p>
+                  </div>
+                  <img src="./images/welcome.png" alt="" />
+                </header>
+                <img
+                  class="floating-img"
+                  src="./images/avatar.jpg"
+                  alt="Portrait of Atif Yasser"
+                />
+                <div class="welcome-details">
+                  <div><strong>Atif Yasser</strong><span>Developer</span></div>
+                  <div><strong>80</strong><span>Projects</span></div>
+                  <div><strong>$8500</strong><span>Earned</span></div>
+                </div>
+                <a class="btn" href="#profile-card">Profile</a>
+              </article>
+              <article class="widget">
+                <header class="widget-heading">
+                  <h2>Quick Draft</h2>
+                  <p>Write A Draft For Your Ideas</p>
+                </header>
+                <form id="feedback-form" class="feedback-form">
+                  <label class="sr-only" for="feedback-title">Draft title</label
+                  ><input
+                    id="feedback-title"
+                    required
+                    placeholder="Title"
+                  /><label class="sr-only" for="feedback-content"
+                    >Draft content</label
+                  ><textarea
+                    id="feedback-content"
+                    required
+                    placeholder="Your Thought"
+                  ></textarea
+                  ><button class="btn" type="submit">Save</button>
+                </form>
+                <p class="form-status" id="draft-status" role="status"></p>
+              </article>
+              <article class="widget">
+                <header class="widget-heading">
+                  <h2>Yearly Targets</h2>
+                  <p>Targets Of The Year</p>
+                </header>
+                <div class="targets">
+                  <div>
+                    <i class="fa-solid fa-dollar-sign"></i
+                    ><span
+                      >Money<strong>$20,000</strong
+                      ><b style="--progress: 80%">80%</b></span
+                    >
+                  </div>
+                  <div>
+                    <i class="fa-solid fa-code"></i
+                    ><span
+                      >Projects<strong>24</strong
+                      ><b style="--progress: 55%">55%</b></span
+                    >
+                  </div>
+                  <div>
+                    <i class="fa-solid fa-user"></i
+                    ><span
+                      >Team<strong>12</strong
+                      ><b style="--progress: 75%">75%</b></span
+                    >
+                  </div>
+                </div>
+              </article>
+              <article class="widget">
+                <header class="widget-heading">
+                  <h2>Tickets Statistics</h2>
+                  <p>Everything About Support Tickets</p>
+                </header>
+                <div class="ticket-grid">
+                  <div>🎟️<strong>2500</strong><span>Total</span></div>
+                  <div>🔄<strong>500</strong><span>Pending</span></div>
+                  <div>✅<strong>1900</strong><span>Closed</span></div>
+                  <div>❌<strong>100</strong><span>Deleted</span></div>
+                </div>
+              </article>
+              <article class="widget list-card">
+                <header class="widget-heading"><h2>Latest News</h2></header>
+                <ul>
+                  <li>
+                    <b>Created SASS Section</b
+                    ><span>New SASS Examples & Tutorials</span>
+                  </li>
+                  <li>
+                    <b>Changed The Design</b
+                    ><span>A Brand New Website Design</span>
+                  </li>
+                  <li>
+                    <b>Team Increased</b
+                    ><span>3 Developers Joined The Team</span>
+                  </li>
+                  <li>
+                    <b>Added Payment Gateway</b
+                    ><span>Many New Gateways Added</span>
+                  </li>
+                </ul>
+              </article>
+              <article class="widget list-card">
+                <header class="widget-heading"><h2>Latest Tasks</h2></header>
+                <ul>
+                  <li>
+                    <b>Record One New Video</b
+                    ><span>Record Python Create Exe Project</span>
+                  </li>
+                  <li>
+                    <b>Write Article</b
+                    ><span>Write Low Level vs High Level</span>
+                  </li>
+                  <li>
+                    <b>Finish Project</b><span>Publish Academy Project</span>
+                  </li>
+                  <li>
+                    <b>Attend The Meeting</b
+                    ><span>Business Analysis Meeting</span>
+                  </li>
+                </ul>
+              </article>
+              <article class="widget list-card">
+                <header class="widget-heading">
+                  <h2>Top Search Items</h2>
+                </header>
+                <ul>
+                  <li><b>Programming</b><span>220</span></li>
+                  <li><b>JavaScript</b><span>180</span></li>
+                  <li><b>PHP</b><span>160</span></li>
+                  <li><b>Code</b><span>145</span></li>
+                  <li><b>Design</b><span>110</span></li>
+                </ul>
+              </article>
+              <article class="widget list-card">
+                <header class="widget-heading"><h2>Latest Uploads</h2></header>
+                <ul>
+                  <li><b>my-file.pdf</b><span>2.9mb</span></li>
+                  <li><b>My-Video-File.avi</b><span>4.9mb</span></li>
+                  <li><b>My-Psd-File.pdf</b><span>4.5mb</span></li>
+                  <li><b>My-Zip-File.pdf</b><span>8.9mb</span></li>
+                </ul>
+              </article>
+              <article class="widget progress-card">
+                <header class="widget-heading">
+                  <h2>Last Project Progress</h2>
+                </header>
+                <ul>
+                  <li>Got The Project</li>
+                  <li>Started The Project</li>
+                  <li>The Project About To Finish</li>
+                  <li>Test The Project</li>
+                  <li>Finish The Project & Get Money</li>
+                </ul>
+              </article>
+              <article class="widget list-card">
+                <header class="widget-heading"><h2>Reminders</h2></header>
+                <ul>
+                  <li>
+                    <b>Check My Tasks List</b><span>28/09/2022 - 12:00am</span>
+                  </li>
+                  <li>
+                    <b>Check My Projects</b><span>26/10/2022 - 12:00am</span>
+                  </li>
+                  <li>
+                    <b>Call All My Clients</b><span>05/11/2022 - 12:00am</span>
+                  </li>
+                </ul>
+              </article>
+              <article class="widget post">
+                <header class="widget-heading"><h2>Latest Post</h2></header>
+                <p><b>Osama Elzero</b><br />About 3 Hours Ago</p>
+                <hr />
+                <p>
+                  You Can Fool All Of The People Some Of The Time, And Some Of
+                  The People All Of The Time, But You Can't Fool All Of The
+                  People All Of The Time.
+                </p>
+                <footer>♡ 1.8K <span>▢ 500</span></footer>
+              </article>
+              <article class="widget social">
+                <header class="widget-heading">
+                  <h2>Social Media Stats</h2>
+                </header>
+                <a href="#">𝕏 <span>90K Followers</span><b>Follow</b></a
+                ><a href="#">f <span>2M Like</span><b>Like</b></a
+                ><a href="#">▶ <span>1M Subs</span><b>Subscribe</b></a
+                ><a href="#">in <span>70K Followers</span><b>Follow</b></a>
+              </article>
+            </div>
+            <article class="projects-table">
+              <h2>Projects</h2>
+              <div class="table-wrap">
+                <table>
+                  <thead>
+                    <tr>
+                      <th>Name</th>
+                      <th>Finish Date</th>
+                      <th>Client</th>
+                      <th>Price</th>
+                      <th>Team</th>
+                      <th>Status</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>Ministry Wikipedia</td>
+                      <td>10 May 2022</td>
+                      <td>Ministry</td>
+                      <td>$5300</td>
+                      <td>AY</td>
+                      <td><b>Pending</b></td>
+                    </tr>
+                    <tr>
+                      <td>Elzero Shop</td>
+                      <td>12 Oct 2021</td>
+                      <td>Elzero Company</td>
+                      <td>$1500</td>
+                      <td>EA</td>
+                      <td><b>In Progress</b></td>
+                    </tr>
+                    <tr>
+                      <td>Bouba App</td>
+                      <td>05 Sep 2021</td>
+                      <td>Bouba</td>
+                      <td>$800</td>
+                      <td>BA</td>
+                      <td><b>Completed</b></td>
+                    </tr>
+                    <tr>
+                      <td>Sayed Website</td>
+                      <td>24 May 2021</td>
+                      <td>Sayed</td>
+                      <td>$300</td>
+                      <td>SA</td>
+                      <td><b>Rejected</b></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </article>
+          </div>
+        </section>
+      </section>
+    </main>
+  </body>
+</html>
