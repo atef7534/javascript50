@@ -16,8 +16,8 @@ You can browse the projects and open each one individually.
 
 ## 📊 Progress
 
-**22 / 50 projects completed**  
-**44% complete**
+**27 / 50 projects completed**  
+**54% complete**
 
 The goal is simple: keep building until I reach 50 projects while gradually moving from basic DOM manipulation to APIs, asynchronous JavaScript, modules, and more complex application logic.
 
@@ -68,12 +68,21 @@ The projects cover practical JavaScript topics including:
 | 20 | [Contact Management](https://atef7534.github.io/javascript50/20%20Contact%20Management/index.html) | Fetch, REST API, DOM |
 | 21 | [Real State](https://atef7534.github.io/javascript50/21%20Real%20State/index.html) | Fetch, REST API, JSON |
 | 22 | [War](https://atef7534.github.io/javascript50/22%20War/index.html) | Fetch, API, game logic |
+| 23 | [Movie Watchlist](https://atef7534.github.io/javascript50/23%20Movie%20Watchlist/index.html) | Fetch, REST API, DOM |
+| 24 | [Dashboard](https://atef7534.github.io/javascript50/24%20Dashboard/index.html) | JavaScript, DOM, UI |
+| 25 | [Elzero Dashboard](https://atef7534.github.io/javascript50/25%20Elzero%20Dashboard/index.html) | JavaScript, DOM, UI |
+| 26 | [Chef Recipe](https://atef7534.github.io/javascript50/26%20Chef%20Recipe/index.html) | JavaScript, APIs, interactive UI |
+| 27 | [Quizzical App](https://atef7534.github.io/javascript50/27%20Quizzical%20App/index.html) | JavaScript, APIs, game logic |
 
 ## ⭐ Projects to Explore
 
 ### 🎨 Color Scheme Generator
 
 A dynamic color-scheme application that communicates with the **Color API**, retrieves color data, and renders the result in the browser.
+
+### 🎬 Movie Watchlist
+
+A movie-focused application that uses API data to search for movies and manage a personal watchlist.
 
 ### 📈 Stock Ticker
 
@@ -86,6 +95,10 @@ A browser calculator that handles arithmetic input through JavaScript logic with
 ### ⌨️ Typing
 
 A browser-based typing game featuring a timer, difficulty selection, and live scoring.
+
+### 🧠 Quizzical App
+
+An interactive quiz application that retrieves questions from an API and turns them into a playable quiz experience.
 
 ## 🛠️ Tech Stack
 
